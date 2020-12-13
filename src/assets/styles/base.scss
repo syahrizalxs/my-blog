@@ -1,11 +1,41 @@
 @import './variable';
 @import './navigation';
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import './home';
+@import './masonry-post';
+@import './post-masonry';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 html body {
   font-family: 'Roboto', sans-serif !important;
   font-weight: 500;
   margin: 0;
   background-color: $background;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.row {
+  margin: 4em 20px;
+}
+
+.overlay::before {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  // position: relav;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, transparent 0%, transparent 1%, rgba(0,0,0,0.8) 99%, rgba(0,0,0,0.8) 100%);
 }

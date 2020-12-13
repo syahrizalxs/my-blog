@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router'
 import { Avatar } from 'antd'
 
 const navLinks = [
@@ -23,7 +24,7 @@ const navLinks = [
 
 
 export default function Navigation ({ user }) {
-  const [menuActive, setMenuActive] = useState(false)
+  const [menuActive, setMenuActive] = useState(false);
   return (
     <nav className="site-navigation">
       <span className="menu-title">Blog App</span>
@@ -39,7 +40,7 @@ export default function Navigation ({ user }) {
         </ul>
         <span className="menu-avatar-container">
           <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={36} />
-          <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
+          <span className="menu-avatar-name">{`Syahrizal Setiawan`}</span>
         </span>
       </div>
       <i className={`ionicons icon ion-ios-${!menuActive ? 'menu' : 'close'}`} onClick={() => setMenuActive(!menuActive)} />

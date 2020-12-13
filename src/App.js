@@ -4,17 +4,12 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import PageRenderer from './page-renderer'
 
 function App() {
-  const user = {
-    firstName: 'Syahrizal',
-    lastName: 'Setiawan'
-  }
-
   return (
     <Router>
       <div className="App">
-        <Navigation user={user} />
+        <Navigation />
         <Switch>
-          <Route path="/:page" component={PageRenderer} />
+          <Route exact path="/:page" component={PageRenderer} />
           <Route path="/" render={() => <Redirect to='/home' />} />
           <Route component={() => 404} />
         </Switch>
